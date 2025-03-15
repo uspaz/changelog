@@ -1,0 +1,107 @@
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+ul{
+    margin:0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.button-changelog{
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.button-changelog:hover{
+    background-color: #444;
+}
+
+
+
+.changelog-points{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    margin: 40px 0px;
+}
+.changelog-points::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 100px;
+    border-left: 4px solid #000;
+    position: absolute;
+    left: 40%;
+    top: -40px
+}
+
+.changelog-header{
+    display:flex; 
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.changelog-text{
+    position: absolute;
+}
+.changelog-text:first-child{
+    width: 150px;
+    left: -170px;
+    text-align: right;
+}
+.changelog-text:last-child{
+    width: 400px;
+    right: -420px;
+}
+
+@media (width < 900px){
+    .changelog-text:first-child{
+        width: 100px;
+        left: -120px;
+        text-align: right;
+    }
+    .changelog-text:last-child{
+        width: 300px;
+        right: -320px;
+    }
+}
+
+@media (width < 680px){
+    .changelog-text:first-child{
+        width: 100px;
+        left: -120px;
+        text-align: right;
+    }
+    .changelog-text:last-child{
+        width: 200px;
+        right: -220px;
+    }
+}
+
+@media (width < 480px){
+    .changelog-text:first-child{
+        width: 100px;
+        left: -120px;
+        text-align: right;
+    }
+    .changelog-text:last-child{
+        width: 150px;
+        right: -170px;
+    }
+}
